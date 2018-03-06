@@ -1,0 +1,23 @@
+{
+  "name": "boiler",
+  "version": "1.0.0",
+  "description": "A CLI tool for getting the best boilerplate repos from github",
+  "main": "index.js",
+  "bin": {
+    "boiler": "./index.js"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Omole Samuel",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.4",
+    "axios": "^0.18.0",
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "github-api": "^3.0.0",
+    "inquirer": "^2.0.0",
+    "nodegit": "^0.21.1"
+  }
+}
