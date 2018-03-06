@@ -6,11 +6,7 @@ const GitHub =  require('github-api');
 const axios = require('axios');
 const { prompt } = require('inquirer');
 
-API_KEY = '9798a0f185946a2365c04880fea3ced1a97296ab'
-
-const gh =new GitHub({
-    token: API_KEY
-})
+var API_KEY;
 
 const questions = [
     {
@@ -25,7 +21,14 @@ const questions = [
     },
  
   ];
+const creds = [
 
+    {
+        type: 'input',
+        name: 'access_token',
+        message: 'Enter you Github access_token, you must create a github app in your account settings (developer Settings):'
+    }
+]
 program
     .version('0.0.1')
     .description('Installs the best boilerplate from github for you!!!')
@@ -55,5 +58,15 @@ program
         .catch(err => console.info(err))
     });
 
+
+program
+    .command('init')
+    .alias('i')
+    .description('Initialize the github API')
+    .action(() => {
+        prompt(creds).then((answer) => {
+            API_KEY = answer.access_token
+        })
+    });
 
 program.parse(process.argv);
