@@ -1,5 +1,5 @@
 {
-  "name": "boiler",
+  "name": "@samie820/boiler",
   "version": "1.0.0",
   "description": "A CLI tool for getting the best boilerplate repos from github",
   "main": "index.js",
