@@ -69,4 +69,23 @@ program
         })
     });
 
+program
+    .command('list')
+    .alias('l')
+    .description('Show a list of the 5 top repos based on your search')
+    .action(() => {
+        prompt(questions)
+        .then(answers => 
+            axios.get(`https://api.github.com/search/repositories?q=${answers.repo}+language:${answers.language}+in:name&sort=stars&order=desc/?access_token=${API_KEY}`)
+            .then((res) => {
+                const data = res.data.items
+                data.map((repo, idx) => {
+                    console.info(`${idx+1}. Name:${repo.name} | Author: ${repo.full_name} | Stars: ${repo.stargazers_count/1000}K`)
+                })
+            })
+            .catch(err => console.info("Unable to get repo, please check your connection"))
+        )
+        .catch(err => console.info(err))
+    });
+
 program.parse(process.argv);
