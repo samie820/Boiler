@@ -1,7 +1,7 @@
 {
   "name": "@samie820/boiler",
-  "version": "1.0.0",
-  "description": "A CLI tool for getting the best boilerplate repos from github",
+  "version": "1.0.1",
+  "description": "A fun CLI tool for getting the best boilerplate repos from github",
   "main": "index.js",
   "bin": {
     "boiler": "./index.js"
