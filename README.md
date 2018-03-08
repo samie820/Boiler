@@ -1,7 +1,7 @@
 # Boiler
 A CLI tool for cloning the top rated repos, please i really that if you have any ideas to add to the project feel free to make a PR
 
-First, we just wanted an app that does one specific task, which is to download the best repo from github. So, please if you have additional functionalities or features that you think will be useful or awesome, submit a pull request at [the repo](https://github.com/samie820/Boiler). Many thanks!!!
+First, we just wanted an app that does one specific task, which is to download the best repo from github. So, please if you have additional functionalities or features that you think will be useful or awesome, submit a pull request at [the repo](https://github.com/samie820/Boiler). I would really love this project to become a community.
 
 Run `npm install -g @samie820/boiler` to install boiler globally on your system
 
